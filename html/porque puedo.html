@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porque Puedo - Eladio Carrión | Info</title>
+    <link rel="stylesheet" href="../css/porque_puedo.css">
+</head>
+<body>
+    <header class="heavy-header">
+        <div class="glow-line"></div>
+        <h1>PORQUE PUEDO</h1>
+        <p class="subtitle">ESTILO HEAVYWEIGHT // TRAP CRUDO // 2024</p>
+    </header>
+
+    <main class="main-container">
+        <section class="album-sidebar">
+            <div class="image-frame">
+                <img src="../img/Porque puedo.jpeg" alt="Portada de Porque Puedo">
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="label">CATEGORÍA</span>
+                    <span class="value">EP (5 Temas)</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">ESTADO</span>
+                    <span class="value">COMPETICIÓN</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">CALIBRE</span>
+                    <span class="value">PESO PESADO</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">FLOW</span>
+                    <span class="value">DIRECTO</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-details">
+            <div class="tracklist-container">
+                <h2>TRACKLIST (THE LINEUP)</h2>
+                <ul class="tracklist">
+                    <li><span class="track-num">01</span> Heavyweight <span class="time">2:44</span></li>
+                    <li><span class="track-num">02</span> Don KBRN Freestyle <span class="time">2:24</span></li>
+                    <li><span class="track-num">03</span> Codigo G <span class="time">2:31</span></li>
+                    <li><span class="track-num">04</span> Henny Mood <span class="time">2:46</span></li>
+                    <li><span class="track-num">05</span> Susanoo <span class="time">2:37</span></li>
+                </ul>
+            </div>
+            <div class="history-container">
+                <h2>DETALLES DEL PROYECTO</h2>
+                <p>
+                    "Porque Puedo" es un EP lanzado por sorpresa donde Eladio Carrión reafirma su dominio técnico. Sin estribillos comerciales ni melodías suaves, este trabajo se enfoca en el "punchline" y la entrega cruda sobre ritmos oscuros. Es una demostración de poder lírico.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="../html/Albumes.html" class="back-btn">VOLVER A LA LISTA</a>
+    </footer>
+    <script>
+        const follower = document.getElementById('cursor-follower');
+        let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+        const speed = 0.08; 
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            followerX += (mouseX - followerX) * speed;
+            followerY += (mouseY - followerY) * speed;
+
+            // Desplazamiento de +20px para no tapar el cursor verde
+            follower.style.left = (followerX + 20) + 'px';
+            follower.style.top = (followerY + 20) + 'px';
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corsa - Eladio Carrión | Info</title>
+    <link rel="stylesheet" href="../css/corsa.css">
+</head>
+<body>
+
+
+    <header class="racing-header">
+        <div class="checker-top"></div>
+        <h1>CORSA</h1>
+        <p class="subtitle">HIGH PERFORMANCE TRAP // MODELO 2026</p>
+    </header>
+
+    <main class="main-container">
+        <section class="album-preview">
+            <div class="image-frame">
+                <img src="../img/Corsa.png" alt="Portada de Corsa">
+            </div>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="label">MOTOR</span>
+                    <span class="value">V8 TRAP</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">RPM</span>
+                    <span class="value">MAX FLOW</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">TRACCIÓN</span>
+                    <span class="value">4X4</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">ORIGEN</span>
+                    <span class="value">PR / USA</span>
+                </div>
+            </div>
+            <div class="history-container">
+                <h2>HISTORIA DEL MODELO</h2>
+                <p>
+                    CORSA es la evolución definitiva del sonido de Eladio Carrión. Inspirado en la estética del motor y las carreras clandestinas, el álbum presenta una producción agresiva, bajos potentes y barras que corren a máxima velocidad.
+                </p>
+            </div>
+        </section>
+
+        <section class="info-details">
+            <div class="tracklist-container">
+                <h2>TRACKLIST (ORDEN DE SALIDA)</h2>
+                <ul class="tracklist">
+                    <li><span class="track-num">01</span> Intro <span class="time">1:17</span></li>
+                    <li><span class="track-num">02</span> Ricky Bobby <span class="time">2:55</span></li>
+                    <li><span class="track-num">03</span> Daikoku ft. TopBoy TGR <span class="time">4:04</span></li>
+                    <li><span class="track-num">04</span> Body <span class="time">3:07</span></li>
+                    <li><span class="track-num">05</span> Polaroid <span class="time">2:57</span></li>
+                    <li><span class="track-num">06</span> Estrella <span class="time">2:48</span></li>
+                    <li><span class="track-num">07</span> Impredecible ft. Mora <span class="time">4:00</span></li>
+                    <li><span class="track-num">08</span> Benji <span class="time">2:04</span></li>
+                    <li><span class="track-num">09</span> GUWOP ft. MIDNVGHT <span class="time">3:08</span></li>
+                    <li><span class="track-num">10</span> Kimchi ft. Myke Towers <span class="time">3:33</span></li>
+                    <li><span class="track-num">11</span> Money En Mi Mente <span class="time">2:45</span></li>
+                    <li><span class="track-num">12</span> De Chamaquitx ft. Cazzu <span class="time">4:46</span></li>
+                    <li><span class="track-num">13</span> Confío En Mi <span class="time">2:41</span></li>
+                    <li><span class="track-num">14</span> Carta Para Mis Fans <span class="time">3:42</span></li>
+                    <li><span class="track-num">15</span> La Vida <span class="time">1:43</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="../html/Albumes.html" class="back-btn">VOLVER AL GARAJE</a>
+    </footer>
+
+    <script>
+        const car = document.getElementById('custom-cursor');
+        let mouseX = 0;
+        let mouseY = 0;
+        let carX = 0;
+        let carY = 0;
+
+        const speed = 0.08; 
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            carX += (mouseX - carX) * speed;
+            carY += (mouseY - carY) * speed;
+
+            // Sumamos 25px para que el coche persiga al cursor rojo desde una distancia prudente
+            car.style.left = (carX + 25) + 'px';
+            car.style.top = (carY + 25) + 'px';
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+</body>
+</html>

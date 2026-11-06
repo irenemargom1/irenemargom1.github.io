@@ -1,0 +1,218 @@
+/* =========================================
+   ESTÉTICA 3MEN2 KBRN - VERDE RADIACTIVO
+   ========================================= */
+
+/* CONFIGURACIÓN DEL CURSOR SISTEMA (VERDE) */
+html, body {
+    /* El estilo 'crosshair' (cruz) es el más acorde al trap/industrial */
+    cursor: crosshair; 
+    background-color: #080808; 
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Forzar cursor de interacción en elementos clickeables */
+a, button, .spec-card, .tracklist li {
+    cursor: pointer;
+}
+
+/* --- HEADER --- */
+.tribute-header {
+    background: linear-gradient(145deg, #111, #000);
+    border: 0.5cm solid #00ff41; 
+    border-radius: 1cm;
+    padding: 25px;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px 0px #00ff41;
+}
+
+.subtitle {
+    color: #00ff41;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 95%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.album-sidebar {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-frame {
+    border: 6px solid #fff;
+    border-radius: 1cm;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 10px 10px 0px #00ff41;
+}
+
+.image-frame img {
+    width: 100%;
+    display: block;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.spec-card {
+    background: #111;
+    border-bottom: 4px solid #00ff41;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.spec-card:hover {
+    background: #00ff41;
+}
+
+.spec-card:hover .label, .spec-card:hover .value {
+    color: #000;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.value {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.history-container {
+    background: rgba(0, 255, 65, 0.03);
+    padding: 25px;
+    border-radius: 1cm;
+    border: 1px solid #00ff41;
+}
+
+.history-container h2 {
+    color: #00ff41;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+.history-container p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* --- COLUMNA DERECHA --- */
+.info-details {
+    flex: 1.5;
+    background: #000;
+    border-radius: 1cm;
+    padding: 30px;
+    border: 0.5cm solid #1a1a1a;
+    margin-bottom: 70px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+.tracklist-container h2 {
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid #00ff41;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.tracklist {
+    list-style: none;
+    padding: 0;
+}
+
+.tracklist li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.tracklist li:hover {
+    background: #00ff41;
+    color: #000;
+}
+
+.track-num {
+    font-weight: bold;
+    color: #00ff41;
+}
+
+.tracklist li:hover .track-num, .tracklist li:hover .time {
+    color: #000;
+}
+
+.time {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* --- BOTÓN VOLVER --- */
+.footer-nav {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: #00ff41;
+    color: #000;
+    text-decoration: none;
+    border-radius: 1cm;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.4s;
+    border: 3px solid #00ff41;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.back-btn:hover {
+    background-color: #000;
+    color: #00ff41;
+    box-shadow: 0 0 30px #00ff41;
+    transform: scale(1.05);
+}

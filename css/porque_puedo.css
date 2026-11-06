@@ -1,0 +1,193 @@
+/* =========================================
+   ESTÉTICA HEAVYWEIGHT - PORQUE PUEDO
+   ========================================= */
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+.heavy-header {
+    background-color: #000;
+    border: 5px solid #369763; /* Verde Neón */
+    border-radius: 15px;
+    padding: 25px;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(191, 255, 0, 0.2);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.glow-line {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 4px;
+    background: #369763;
+    box-shadow: 0 0 10px #369763;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin: 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0px #369763;
+}
+
+.subtitle {
+    color: #888;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 95%;
+    max-width: 1200px;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.album-sidebar {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-frame {
+    border: 3px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 0px #369763;
+}
+
+.image-frame img {
+    width: 100%;
+    display: block;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.spec-card {
+    background: #121212;
+    border-right: 4px solid #369763;
+    padding: 12px;
+    text-align: right;
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    color: #369763;
+    font-weight: bold;
+}
+
+.value {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.history-container {
+    background: #121212;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.history-container h2 {
+    font-size: 1.1rem;
+    color: #369763;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.history-container p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+/* --- COLUMNA DERECHA --- */
+.info-details {
+    flex: 1.5;
+    background: #111;
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid #222;
+}
+
+.info-details h2 {
+    color: #fff;
+    border-left: 5px solid #369763;
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+.tracklist {
+    list-style: none;
+    padding: 0;
+}
+
+.tracklist li {
+    padding: 15px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.tracklist li:hover {
+    background: #1a1a1a;
+    color: #369763;
+}
+
+.track-num {
+    font-weight: bold;
+    margin-right: 15px;
+    color: #369763;
+}
+
+.time {
+    margin-left: auto;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* --- BOTÓN VOLVER --- */
+.back-btn {
+    margin: 40px 0;
+    background-color: transparent;
+    color: #369763;
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 2px solid #369763;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background-color: #369763;
+    color: #000;
+    box-shadow: 0 0 20px #369763;
+}

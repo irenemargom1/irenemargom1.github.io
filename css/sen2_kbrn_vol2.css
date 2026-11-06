@@ -1,0 +1,129 @@
+/* =========================================
+   ESTÉTICA SEN2 KBRN VOL. 2 (RACING STYLE)
+   ========================================= */
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+/* --- HEADER --- */
+.tribute-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border: 0.3cm solid #D35400;
+    border-radius: 1cm;
+    padding: 20px;
+    width: 90%;
+    max-width: 1100px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #D35400;
+    text-shadow: 3px 3px 0px #fff;
+    margin: 10px 0;
+}
+
+.subtitle { color: #888; letter-spacing: 2px; font-weight: bold; }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.top-content {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.album-sidebar { flex: 1; min-width: 300px; }
+
+.image-frame img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 1cm;
+    border: 4px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #D35400;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.spec-card {
+    background: #111;
+    border-left: 4px solid #D35400;
+    padding: 10px;
+}
+
+.label { color: #D35400; font-size: 0.7rem; font-weight: bold; }
+.value { font-size: 0.9rem; font-weight: bold; }
+
+/* --- TRACKLIST --- */
+.info-details {
+    flex: 1.2;
+    background: #111;
+    padding: 25px;
+    border-radius: 1cm;
+    border: 2px solid #1a1a1a;
+}
+
+.tracklist { list-style: none; padding: 0; }
+.tracklist li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #222;
+    transition: 0.3s;
+}
+
+.tracklist li:hover {
+    background: #D35400;
+    color: #000;
+    transform: translateX(10px);
+}
+
+.track-num { color: #D35400; font-weight: bold; margin-right: 10px; }
+.tracklist li:hover .track-num { color: #fff; }
+
+.history-container {
+    background: #111;
+    padding: 20px;
+    border-radius: 1cm;
+    border: 1px solid #333;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.history-container h2 { color: #D35400; border-bottom: 1px solid #333; }
+
+/* --- BOTÓN VOLVER --- */
+.footer-nav { margin: 40px 0; }
+.back-btn {
+    padding: 12px 35px;
+    border: 3px solid #D35400;
+    color: #D35400;
+    text-decoration: none;
+    border-radius: 2cm;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.back-btn:hover { background: #D35400; color: #fff; }

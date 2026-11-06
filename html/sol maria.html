@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol María - Eladio Carrión | Info</title>
+    <link rel="stylesheet" href="../css/sol_maria.css">
+</head>
+<body>
+    <header class="tribute-header">
+        <h1>SOL MARÍA</h1>
+        <p class="subtitle">UN TRIBUTO A LA FAMILIA // 2024</p>
+    </header>
+
+    <main class="main-container">
+        <section class="album-sidebar">
+            <div class="sidebar-horizontal-layout">
+                <div class="image-frame">
+                    <img src="../img/Sol maria.jpg" alt="Portada de Sol María">
+                </div>
+                
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <span class="label">CONCEPTO</span>
+                        <span class="value">PERSONAL</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="label">ESTADO</span>
+                        <span class="value">BENDECIDO</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="label">GÉNERO</span>
+                        <span class="value">AFRO / TRAP</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="label">DEDICATORIA</span>
+                        <span class="value">SOL MARÍA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-container">
+                <h2>DETALLES DEL PROYECTO</h2>
+                <p>
+                    "Sol María" es una carta de amor pública de Eladio a su madre.
+                </p>
+            </div>
+        </section>
+
+        <section class="info-details">
+            <div class="tracklist-container">
+                <h2>TRACKLIST (THE LINEUP)</h2>
+                <ul class="tracklist">
+                    <li><span class="track-num">01</span> Bendecido <span class="time">2:24</span></li>
+                    <li><span class="track-num">02</span> Canción Feliz del Disco ft. Milo J <span class="time">3:04</span></li>
+                    <li><span class="track-num">03</span> TQMQA <span class="time">3:10</span></li>
+                    <li><span class="track-num">04</span> Sonrisa <span class="time">2:32</span></li>
+                    <li><span class="track-num">05</span> Sigo Enamorau' ft. Yandel <span class="time">3:14</span></li>
+                    <li><span class="track-num">06</span> Tu Ritmo <span class="time">2:28</span></li>
+                    <li><span class="track-num">07</span> Hey Lil Mama ft. Rauw Alejandro <span class="time">3:36</span></li>
+                    <li><span class="track-num">08</span> Tranquila Baby <span class="time">2:08</span></li>
+                    <li><span class="track-num">09</span> Tanta Droga ft. Arcangel y De La Ghetto <span class="time">4:08</span></li>
+                    <li><span class="track-num">10</span> El Malo ft. Sech <span class="time">3:29</span></li>
+                    <li><span class="track-num">11</span> Fé, Cojones y Paciencia <span class="time">3:10</span></li>
+                    <li><span class="track-num">12</span> Todo Lit ft. Duki <span class="time">3:59</span></li>
+                    <li><span class="track-num">13</span> Mencionar <span class="time">2:21</span></li>
+                    <li><span class="track-num">14</span> RKO <span class="time">1:46</span></li>
+                    <li><span class="track-num">15</span> Luchas Mentales <span class="time">2:46</span></li>
+                    <li><span class="track-num">16</span> Mamá's Boy ft. Nach <span class="time">4:23</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="../html/Albumes.html" class="back-btn">VOLVER A LA COLECCIÓN</a>
+    </footer>
+    <script>
+        const follower = document.getElementById('cursor-follower');
+        let mouseX = 0, mouseY = 0; // Posición del ratón
+        let fX = 0, fY = 0; // Posición de la flor
+        
+        // Detectar movimiento
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function move() {
+            // Cálculo de suavizado (Lerp)
+            // La flor se acerca al ratón un 10% (0.1) en cada frame
+            fX += (mouseX - fX) * 0.1;
+            fY += (mouseY - fY) * 0.1;
+
+            // Usamos transform en lugar de top/left para un rendimiento mucho más fluido
+            follower.style.transform = `translate(${fX}px, ${fY}px) rotate(${fX * 0.05}deg)`;
+            
+            requestAnimationFrame(move);
+        }
+        
+        // Iniciar animación
+        move();
+    </script>
+
+</body>
+</html>

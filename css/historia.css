@@ -1,0 +1,183 @@
+/* =========================================
+   1. CONFIGURACIÓN DE VARIABLES (DINÁMICO)
+   ========================================= */
+:root {
+    /* Colores originales de tu diseño */
+    --color-fondo-pagina: rgb(190, 244, 244); 
+    --color-primario-borde: rgb(183, 136, 226);
+    --color-titulos: rgb(158, 81, 230);
+    --color-acentos-bg: rgb(194, 157, 228);
+    --color-acentos-h3: rgba(182, 91, 198, 0.474);
+}
+
+/* --- CONFIGURACIÓN GLOBAL / BODY --- */
+body {
+    background-color: var(--color-fondo-pagina); /* Dinámico */
+    display: grid; 
+    grid-template-rows: auto; 
+    grid-row-gap: 1em; 
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+    transition: background-color 0.5s ease;
+}
+
+/* --- ENCABEZADO Y TÍTULOS --- */
+header {
+    background-color: rgb(0, 0, 0); 
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+h1 {
+    color: var(--color-titulos); /* Dinámico */
+    font-size: xx-large; 
+    text-shadow: 5px 5px 5px; 
+    text-align: center; 
+    font-size: xx-larger; 
+}
+
+h2 > span { 
+    background-color: var(--color-acentos-bg); /* Dinámico */
+    border-radius: 0.5cm; 
+    margin-left: 20px;
+}
+
+h3 > span {
+    background-color: var(--color-acentos-h3); /* Dinámico */
+    color: beige; 
+    border-radius: 1cm; 
+    font-size: larger; 
+}
+
+h3:hover { 
+    scale: 1.1; 
+}
+
+/* =========================================
+   3. NAVEGACIÓN (NAV) Y MENÚS
+   ========================================= */
+nav {
+    display: grid; 
+    grid-template-rows: auto; 
+    background-color: black; 
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+ul {
+    display: inline-flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 20px; 
+    list-style: none;
+    margin: 0; 
+    padding-left: 20px; 
+}
+
+#historia > span {
+    background-color: var(--color-acentos-bg); /* Dinámico */
+    color: beige; 
+    border-radius: 0.5cm; 
+}
+
+/* --- Estilos para el Navegador Compacto --- */
+nav.compacto h2#nav {
+    display: none; 
+}
+
+nav.compacto {
+    padding: 5px 0; 
+    border-width: 0.2cm; 
+    transition: all 0.4s ease; 
+}
+
+nav.compacto h3 > span {
+    font-size: 0.9rem; 
+    padding: 5px 15px;
+}
+
+nav.compacto ul {
+    justify-content: flex-start;
+    margin: 5px auto;
+    gap: 10px;
+}
+
+/* --- CONTENIDO PRINCIPAL (ARTICLE Y PÁRRAFOS) --- */
+article {
+    background-color: rgb(0, 0, 0); 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 6fr; 
+    grid-template-rows: auto; 
+    text-align: center; 
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+p {
+    color: beige; 
+    text-align: justify; 
+    border: 1em; 
+}
+
+/* --- ELEMENTOS MULTIMEDIA --- */
+img {
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+iframe {
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 1; 
+    grid-row-end: 4; 
+    margin: 20px;
+    float: left;
+    border-radius: 15px;
+}
+/* --- IDENTIFICADORES ESPECÍFICOS (IDS) --- */
+
+#uno {
+    grid-column-start: 3; /* donde empieza la columna*/
+    grid-column-end: 4; /* donde acaba la columna*/
+    grid-row-start: 1; /* donde empieza la fila*/
+    grid-row-end: 1; /* donde acaba la fila*/
+    margin-right: 20px;
+}
+
+#dos {
+    grid-column-start: 3; /* donde empieza la columna*/
+    grid-column-end: 4; /* donde acaba la columna*/
+    grid-row-start: 2; /* donde empieza la fila*/
+    grid-row-end: 2; /* donde acaba la fila*/
+    margin-right: 20px;
+}
+
+#tres {
+    grid-column-start: 1; /* donde empieza la columna*/
+    grid-column-end: 4; /* donde acaba la columna*/
+    grid-row-start: 3; /* donde empieza la fila*/
+    grid-row-end: 3; /* donde acaba la fila*/
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#cuatro {
+    grid-column-start: 1; /* donde empieza la columna*/
+    grid-column-end: 4; /* donde acaba la columna*/
+    grid-row-start: 4; /* donde empieza la fila*/
+    grid-row-end: 4; /* donde acaba la fila*/
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#cinco {
+    grid-column-start: 1; /* donde empieza la columna*/
+    grid-column-end: 4; /* donde acaba la columna*/
+    grid-row-start: 5; /* donde empieza la fila*/
+    grid-row-end: 5; /* donde acaba la fila*/
+    margin-right: 20px;
+}

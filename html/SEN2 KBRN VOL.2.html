@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sen2 Kbrn Vol. 2 - Eladio Carrión | Info</title>
+    <link rel="stylesheet" href="../css/sen2_kbrn_vol2.css">
+</head>
+<body>
+
+
+    <header class="tribute-header">
+        <h1>SEN2 KBRN VOL. 2</h1>
+        <p class="subtitle">LA SECUELA DEL DRILL // 2022</p>
+    </header>
+
+    <main class="main-container">
+        <div class="top-content">
+            <section class="album-sidebar">
+                <div class="image-frame">
+                    <img src="../img/SEN2 KBRN VOL.2.jpg" alt="Portada de Sen2 Kbrn Vol. 2">
+                </div>
+                
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <span class="label">MODELO</span>
+                        <span class="value">DRILL SERIE</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="label">TRACCIÓN</span>
+                        <span class="value">TRASERA (RWD)</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="label">CALIBRE</span>
+                        <span class="value">PESO PESADO</span>
+                    </div>
+                    <div class="spec-card">
+                        <span class="label">ORIGEN</span>
+                        <span class="value">HUMACAO, PR</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-details">
+                <div class="tracklist-container">
+                    <h2>TRACKLIST (THE LINEUP)</h2>
+                    <ul class="tracklist">
+                        <li><span class="track-num">01</span> Gladiador <span class="time">3:07</span></li>
+                        <li><span class="track-num">02</span> Si La Calle Llama <span class="time">4:00</span></li>
+                        <li><span class="track-num">03</span> Mbappe <span class="time">2:29</span></li>
+                        <li><span class="track-num">04</span> Hp Freestyle <span class="time">2:03</span></li>
+                        <li><span class="track-num">05</span> Caras Vemos <span class="time">2:36</span></li>
+                        <li><span class="track-num">06</span> Hugo <span class="time">2:58</span></li>
+                        <li><span class="track-num">07</span> Te Dijeron <span class="time">2:40</span></li>
+                        <li><span class="track-num">08</span> Friends <span class="time">2:45</span></li>
+                        <li><span class="track-num">09</span> La Fama <span class="time">2:14</span></li>
+                        <li><span class="track-num">10</span> Carta a Dios <span class="time">2:00</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="history-container">
+            <h2>DETALLES DEL PROYECTO</h2>
+            <p>
+                La segunda entrega de la saga "Sen2 Kbrn" consolidó el dominio de Eladio en el Trap y Drill técnico. Con una atmósfera oscura, casi cinematográfica, y letras afiladas, este disco demostró que el "peso pesado" del trap no necesita colaboraciones para liderar el juego.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="../html/Albumes.html" class="back-btn">VOLVER A LA COLECCIÓN</a>
+    </footer>
+    <script>
+        const hat = document.getElementById('chef-hat-follower');
+        let mouseX = 0;
+        let mouseY = 0;
+        let hatX = 0;
+        let hatY = 0;
+
+        const speed = 0.08; // Suavizado igual que en Corsa.html
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            hatX += (mouseX - hatX) * speed;
+            hatY += (mouseY - hatY) * speed;
+
+            // Ajuste de posición: el gorro flota un poco encima y a la derecha del cursor naranja
+            hat.style.left = (hatX + 20) + 'px';
+            hat.style.top = (hatY - 40) + 'px';
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+</body>
+</html>

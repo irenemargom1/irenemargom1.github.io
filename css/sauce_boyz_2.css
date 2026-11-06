@@ -1,0 +1,137 @@
+/* ESTÉTICA SAUCE BOYZ 2 - NARANJA & ESMERALDA */
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tribute-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 4px 4px 0px #FF8C00;
+}
+
+.subtitle { color: #2ECC71; letter-spacing: 3px; font-weight: bold; }
+
+.main-container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.top-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* COLUMNA IZQUIERDA */
+.album-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-frame {
+    text-align: center;
+}
+
+.image-frame img {
+    width: 85%; /* Imagen optimizada para no alargar demasiado la columna */
+    max-width: 350px;
+    border-radius: 1cm;
+    border: 4px solid #2ECC71;
+    box-shadow: 8px 8px 0px #FF8C00;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.spec-card {
+    background: #111;
+    border-left: 4px solid #2ECC71;
+    padding: 12px;
+}
+
+.label { color: #FF8C00; font-size: 0.7rem; font-weight: bold; }
+.value { font-size: 0.9rem; font-weight: bold; }
+
+/* HISTORIA (AHORA A LA IZQUIERDA) */
+.history-container {
+    background: #111;
+    padding: 20px;
+    border-radius: 1cm;
+    border: 1px solid #2ECC71;
+    margin-top: 10px;
+}
+
+.history-container h2 {
+    color: #FF8C00;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #2ECC71;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.history-container p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* COLUMNA DERECHA (TRACKLIST) */
+.info-details {
+    flex: 1.3;
+    background: #111;
+    padding: 30px;
+    border-radius: 1cm;
+    border: 2px solid #FF8C00;
+}
+
+.tracklist { list-style: none; padding: 0; margin: 0; }
+.tracklist li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+    font-size: 0.95rem;
+}
+
+.track-num { color: #2ECC71; font-weight: bold; }
+.time { color: #666; font-size: 0.85rem; }
+
+/* BOTÓN VOLVER */
+.footer-nav {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 3px solid #2ECC71;
+    color: #2ECC71;
+    text-decoration: none;
+    border-radius: 2cm;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #2ECC71;
+    color: #000;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+}

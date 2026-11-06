@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3MEN2 KBRN - Eladio Carrión | Info</title>
+    <link rel="stylesheet" href="../css/3men2_kbrn.css">
+</head>
+<body>
+
+    <header class="tribute-header">
+        <h1>3MEN2 KBRN</h1>
+        <p class="subtitle">THE TRAP BIBLE // 2023</p>
+    </header>
+
+    <main class="main-container">
+        <section class="album-sidebar">
+            <div class="image-frame">
+                <img src="../img/3MEN2 KBRN.jpg" alt="Portada de 3MEN2 KBRN">
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="label">GÉNERO</span>
+                    <span class="value">TRAP / DRILL</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">IMPACTO</span>
+                    <span class="value">GLOBAL</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">ESTADO</span>
+                    <span class="value">LEYENDA</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">PRODUCTOR</span>
+                    <span class="value">DVLP / OTROS</span>
+                </div>
+            </div>
+
+            <div class="history-container">
+                <h2>EL PROYECTO</h2>
+                <p>
+                    Considerado uno de los mejores álbumes de trap en español de la historia. Con colaboraciones de leyendas como Lil Wayne y 50 Cent, Eladio consolidó su posición como el referente número uno del género.
+                </p>
+            </div>
+        </section>
+
+        <section class="info-details">
+            <div class="tracklist-container">
+                <h2>TRACKLIST (FEATURES)</h2>
+                <ul class="tracklist">
+                    <li><span class="track-num">01</span> Padre Tiempo <span class="time">3:45</span></li>
+                    <li><span class="track-num">02</span> Gladiador (Remix) ft. Lil Wayne <span class="time">3:17</span></li>
+                    <li><span class="track-num">03</span> El Hokage <span class="time">2:06</span></li>
+                    <li><span class="track-num">04</span> Mbappé (Remix) ft. Future <span class="time">4:09</span></li>
+                    <li><span class="track-num">05</span> Si Salimos ft. 50 Cent <span class="time">3:21</span></li>
+                    <li><span class="track-num">06</span> ¿Qué Carajos Quieres Tú Ahora? <span class="time">2:31</span></li>
+                    <li><span class="track-num">07</span> Cuevita <span class="time">2:38</span></li>
+                    <li><span class="track-num">08</span> Coco Chanel ft. Bad Bunny <span class="time">3:30</span></li>
+                    <li><span class="track-num">09</span> Si La Calle Llama (Remix) ft. Myke Towers <span class="time">4:00</span></li>
+                    <li><span class="track-num">10</span> Peso a Peso ft. Quavo, Rich The Kid, Ñengo Flow <span class="time">3:40</span></li>
+                    <li><span class="track-num">11</span> Mala Mía Otra Vez <span class="time">2:48</span></li>
+                    <li><span class="track-num">12</span> Friends (Remix) ft. Lil Tjay, Luar La L <span class="time">4:14</span></li>
+                    <li><span class="track-num">13</span> Quizás, Tal Vez <span class="time">2:29</span></li>
+                    <li><span class="track-num">14</span> M3 ft. Fivio Foreign <span class="time">3:12</span></li>
+                    <li><span class="track-num">15</span> Betty ft. SHB, Hydro <span class="time">3:27</span></li>
+                    <li><span class="track-num">16</span> Haciendo Dinero <span class="time">2:31</span></li>
+                    <li><span class="track-num">17</span> Air France <span class="time">3:25</span></li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="../html/3MEN2 KBRN.html" class="back-btn">VOLVER A LA COLECCIÓN</a>
+    </footer>
+
+    <script>
+        const follower = document.getElementById('cursor-follower');
+        let mouseX = 0, mouseY = 0; // Posición real del ratón
+        let fX = 0, fY = 0; // Posición de la rosa (suavizada)
+
+        // Actualizar posición real del ratón
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Función de animación (interpolación lineal)
+        function moveRosa() {
+            // La rosa se acerca a la posición del ratón un 8% (0.08) en cada frame.
+            // Esto crea el efecto de retraso suave.
+            fX += (mouseX - fX) * 0.08;
+            fY += (mouseY - fY) * 0.08;
+
+            // Aplicamos la posición. Centramos la imagen con translate(-50%, -50%)
+            follower.style.transform = `translate(${fX}px, ${fY}px) translate(-50%, -50%)`;
+
+            requestAnimationFrame(moveRosa); // Ejecutar en el próximo frame
+        }
+        const links = document.querySelectorAll('a, .spec-card, .tracklist li');
+
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                follower.style.filter = `drop-shadow(0 0 20px #00ff41) scale(1.5)`;
+                follower.style.transition = "transform 0.2s, filter 0.2s";
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                follower.style.filter = `drop-shadow(0 0 8px #00ff41)`;
+                follower.style.transform = `translate(${fX}px, ${fY}px) translate(-50%, -50%) scale(1)`;
+                // Quitamos la transición para que no choque con el requestAnimationFrame
+                setTimeout(() => follower.style.transition = "none", 200);
+            });
+        });
+        // Añade esto al final de tu script existente
+        window.addEventListener('mousedown', () => {
+            follower.style.transform = `translate(${fX}px, ${fY}px) translate(-50%, -50%) scale(0.8)`;
+            follower.style.filter = `drop-shadow(0 0 30px #00ff41) brightness(2)`;
+        });
+
+        window.addEventListener('mouseup', () => {
+            follower.style.transform = `translate(${fX}px, ${fY}px) translate(-50%, -50%) scale(1)`;
+            follower.style.filter = `drop-shadow(0 0 10px #00ff41) brightness(1.2)`;
+        });
+        // Iniciar la animación
+        moveRosa();
+
+    </script>
+
+</body>
+</html>

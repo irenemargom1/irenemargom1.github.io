@@ -1,0 +1,218 @@
+/* =========================================
+   ESTÉTICA STREET / GRAFFITI - DON KBRN
+   ========================================= */
+
+body {
+    background-color: #050505; /* Negro aún más profundo, asfalto */
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace; /* Mantenemos tu fuente */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- HEADER --- */
+.street-header {
+    background-color: #000;
+    /* Borde estilo "trazo de marcador" grueso, en naranja quemado */
+    border: 0.5cm solid #d35400; 
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(211, 84, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* Efecto visual de pintura spray overlay (opcional, muy sutil) */
+.spray-paint-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(#d35400 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.05;
+}
+
+h1 {
+    color: #f1c40f; /* Amarillo Graffiti brillante */
+    font-size: 3.5rem;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px #d35400; /* Sombra naranja para volumen */
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 95%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* --- COLUMNA IZQUIERDA (SIDEBAR) --- */
+.album-sidebar {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Reset gap, el espacio lo daremos con márgenes */
+}
+
+.image-frame {
+    border: 5px solid #d35400; /* Borde naranja */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 8px 8px 0px #f1c40f; /* Sombra amarilla sólida */
+    margin-bottom: 20px;
+}
+
+.image-frame img {
+    width: 100%;
+    display: block;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px; /* <--- ESPACIO DE SEPARACIÓN CON LA HISTORIA */
+}
+
+.spec-card {
+    background: #111; /* Gris oscuro crudo */
+    /* Línea amarilla lateral para las specs */
+    border-left: 4px solid #f1c40f; 
+    padding: 12px;
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.value {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.history-container {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    /* Borde naranja para la caja de historia */
+    border: 2px solid #d35400; 
+}
+
+.history-container h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #f1c40f;
+    border-bottom: 1px solid #d35400;
+    padding-bottom: 5px;
+}
+
+.history-container p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* --- COLUMNA DERECHA (TRACKLIST) --- */
+.info-details {
+    flex: 1.5;
+    min-width: 350px;
+    /* Fondo muy sutil con tono naranja */
+    background: rgba(211, 84, 0, 0.05); 
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #222;
+}
+
+.info-details h2 {
+    color: #f1c40f;
+    border-bottom: 2px solid #d35400;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.tracklist {
+    list-style: none;
+    padding: 0;
+}
+
+.tracklist li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    /* Muestra la mano al pasar por la lista */
+    cursor: pointer; 
+}
+
+.tracklist li:hover {
+    background: #f1c40f; /* Amarillo de fondo al pasar el ratón */
+    color: #000; /* Texto negro para contraste */
+    /* Efecto de inclinación estilo graffiti */
+    transform: translateX(10px) skewX(-10deg); 
+}
+
+.track-num {
+    font-weight: bold;
+    margin-right: 15px;
+    color: #d35400; /* Naranja para los números */
+}
+
+.tracklist li:hover .track-num {
+    color: #000; /* Negro en hover */
+}
+
+.time {
+    margin-left: auto;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* --- BOTÓN VOLVER --- */
+.footer-nav {
+    margin: 40px 0;
+}
+
+.back-btn {
+    background-color: #000;
+    color: #f1c40f;
+    text-decoration: none;
+    padding: 12px 35px;
+    /* Borde naranja y amarillo */
+    border: 3px solid #d35400; 
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #f1c40f;
+    color: #000;
+    box-shadow: 0px 0px 20px rgba(241, 196, 15, 0.6);
+    scale: 1.05;
+}

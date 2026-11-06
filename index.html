@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!--Tipo de documento-->
+<html> <!--La parte principal que engloba el documento-->
+    <head> <!--Parte no visible del documento-->
+        <title>Eladio Carrión</title> <!--Unica parte visible del head-->
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+        <script src="js/navegacion.js"></script>
+        <script src="js/colores.js"></script>
+    </head>
+    <body> <!--Parte visible del documento-->
+        <div id="universal-follower" style="position: fixed; pointer-events: none; z-index: 9999; display: none;">
+            <img id="follower-img" src="" style="width: 60px; height: auto;">
+        </div>
+        <div id="preview-splash" class="hidden">
+            <div class="splash-content">
+                <div class="loader"></div>
+                <h1>Cargando...</h1>
+                <p id="selected-theme-name">Preparando tu sesión</p>
+                <button onclick="irAInicio()" class="btn-preview">Entrar ahora</button>
+            </div>
+        </div>
+        <header> <!--Elementos de encabezado-->
+            <h1>Eladio Carrión</h1>
+        </header>
+        <nav> <!--Menú de navegación-->
+            <h2 id="nav"><span>Navegador</span></h2>
+            <ul > <!--Lista-->
+                <li><h3 id="inicio"><span>Inicio</span></h3></a></li> <!--Elemento de la lista-->
+                <li><a href="html/Historia.html"><h3><span>Historia</span></h3></a></li> <!--Elemento de la lista-->
+                <li><a href="html/Albumes.html"><h3 ><span>Álbumes</span></h3></a></li> <!--Elemento de la lista-->
+                <li><a href="https://www.archivoseladio.com/" target="_blank"><h3><span>Archivos<small>↗</small></span></h3></a></li>
+                <li><a href="https://shop.eladiocarrion.com/" target="_blank"><h3><span>Shop<small>↗</small></span></h3></a></li>
+                <li><a href="https://open.spotify.com/intl-es/artist/5XJDexmWFLWOkjOEjOVX3e" target="_blank"><h3><span>Spotify<small>↗</small></span></h3></a></li>
+            </ul>
+        </nav>
+        <section>
+            <article class="collage-pc">
+                <div class="photo large"><img src="img/8.jpg" alt="Don H"></div>
+                <div class="photo vertical"><img src="img/2.jpg" alt="Don King"></div>
+                <div class="photo"><img src="img/1.jpg" alt="Eladio Suit"></div>
+                <div class="photo"><img src="img/9.jpg" alt="Eladio y perro" id="eladio-dog"></div>
+
+                <div class="photo horizontal"><img src="img/7.jpg" alt="Archivos Eladio"></div>
+                <div class="photo vertical"><img src="img/3.jpg" alt="Concierto vertical"></div>
+                <div class="photo"><img src="img/6.jpg" alt="Nieve"></div>
+
+                <div class="photo horizontal"><img src="img/sauce.jpg" alt="Concierto humo"></div>
+                <div class="photo horizontal"><img src="img/4.jpg" alt="Escenario"></div>
+                <div class="photo"><img src="img/5.jpg" alt="Fuego"></div>
+            </article>
+    </body>
+</html>

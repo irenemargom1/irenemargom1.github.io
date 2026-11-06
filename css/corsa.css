@@ -1,0 +1,197 @@
+/* =========================================
+   ESTÉTICA RACING - CORSA (FULL)
+   ========================================= */
+
+/* CONFIGURACIÓN GLOBAL Y CURSOR */
+body {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+/* --- HEADER --- */
+.racing-header {
+    background-color: #000;
+    border: 0.4cm solid #ff3333; /* Rojo Carrera */
+    border-radius: 1cm;
+    padding: 30px;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 51, 51, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.checker-top {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 10px;
+    background: repeating-linear-gradient(90deg, #fff, #fff 15px, #000 15px, #000 30px);
+}
+
+h1 {
+    color: #ff3333;
+    font-size: 3rem;
+    margin: 10px 0;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px 0px #fff;
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #888;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    width: 95%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+/* --- LADO IZQUIERDO (PREVIEW) --- */
+.album-preview {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+.image-frame {
+    border: 5px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 0px #ff3333;
+}
+
+.image-frame img {
+    width: 100%;
+    display: block;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px; 
+}
+
+.spec-card {
+    background: #1a1a1a;
+    border-left: 4px solid #ff3333;
+    padding: 10px;
+    text-align: left;
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.value {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.history-container {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.history-container h2 { 
+    color: #ff3333; 
+    font-size: 1rem; 
+    border-bottom: 1px solid #fff; 
+}
+
+/* --- LADO DERECHO (INFO) --- */
+.info-details {
+    flex: 1.5;
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1cm;
+    padding: 30px;
+    border: 1px solid #333;
+}
+
+h2 {
+    color: #ff3333;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.tracklist {
+    list-style: none;
+    padding: 0;
+}
+
+.tracklist li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.tracklist li:hover {
+    background: #ff3333;
+    color: #000;
+    transform: translateX(10px) skewX(-10deg);
+}
+
+.track-num {
+    font-weight: bold;
+    margin-right: 15px;
+    color: #ff3333;
+}
+
+.tracklist li:hover .track-num {
+    color: #fff;
+}
+
+.time {
+    margin-left: auto;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- BOTÓN VOLVER --- */
+.footer-nav {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.back-btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+    border: 3px solid #ff3333;
+    border-radius: 1cm;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+    box-shadow: 5px 5px 0px #fff;
+}
+
+.back-btn:hover {
+    background-color: #ff3333;
+    color: #fff;
+    box-shadow: 0px 0px 20px #ff3333;
+    transform: scale(1.05);
+}

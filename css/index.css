@@ -1,0 +1,240 @@
+/* =========================================
+   1.CONFIGURACIÓN DE VARIABLES (DINÁMICO)
+   ========================================= */
+:root {
+    /* Estos son tus colores originales por defecto */
+    --color-fondo-pagina: rgb(190, 244, 244); 
+    --color-primario-borde: rgb(183, 136, 226);
+    --color-titulos: rgb(158, 81, 230);
+    --color-acentos-bg: rgb(194, 157, 228);
+    --color-acentos-h3: rgba(182, 91, 198, 0.474);
+}
+
+/* =========================================
+   2. CONFIGURACIÓN BASE (BODY)
+   ========================================= */
+body {
+    background-color: var(--color-fondo-pagina); /* Dinámico */
+    display: grid; 
+    grid-template-rows: auto;
+    grid-row-gap: 1em; 
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+    transition: background-color 0.5s ease; /* Transición suave al cambiar tema */
+}
+
+header {
+    background-color: rgb(0, 0, 0); 
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+h1 {
+    color: var(--color-titulos); /* Dinámico */
+    font-size: xx-large; 
+    text-shadow: 5px 5px 5px; 
+    text-align: center; 
+    font-size: xx-larger; 
+}
+
+/* =========================================
+   3. NAVEGACIÓN (NAV) Y MENÚS
+   ========================================= */
+nav {
+    display: grid; 
+    grid-template-rows: auto; 
+    background-color: black; 
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+ul {
+    display: inline-flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 20px; 
+    list-style: none;
+    margin: 0; 
+    padding-left: 20px; 
+}
+
+#inicio > span {
+    background-color: var(--color-acentos-bg); /* Dinámico */
+    color: beige; 
+    border-radius: 0.5cm; 
+}
+
+/* Estilos de los textos con fondo (Spans) */
+h2 > span { 
+    background-color: var(--color-acentos-bg); /* Dinámico */
+    border-radius: 0.5cm; 
+    margin-left: 20px; 
+}
+
+h3 > span {
+    background-color: var(--color-acentos-h3); /* Dinámico */
+    color: beige; 
+    border-radius: 1cm; 
+    font-size: larger; 
+}
+
+h3:hover { 
+    scale: 1.1; 
+}
+
+/* --- Estilos para el Navegador Compacto --- */
+nav.compacto h2#nav {
+    display: none; 
+}
+
+nav.compacto {
+    padding: 5px 0; 
+    border-width: 0.2cm; 
+    transition: all 0.4s ease; 
+}
+
+nav.compacto h3 > span {
+    font-size: 0.9rem; 
+    padding: 5px 15px;
+}
+
+nav.compacto ul {
+    justify-content: flex-start;
+    margin: 5px auto;
+    gap: 10px;
+}
+
+/* =========================================
+   4. SECCIÓN PRINCIPAL Y COLLAGE
+   ========================================= */
+article {
+    background-color: rgb(0, 0, 0); 
+    display: grid; 
+    grid-template-columns: 1fr 6fr; 
+    grid-template-rows: auto; 
+    text-align: center; 
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+video, img {
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+.collage-pc {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-auto-rows: 180px; 
+    grid-auto-flow: dense; 
+    gap: 12px;
+    padding: 25px;
+    background-color: #000;
+    border: 0.5cm solid var(--color-primario-borde); /* Dinámico */
+    border-radius: 1cm;
+    margin: 20px auto;
+    max-width: 1400px; 
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.8cm;
+    transition: all 0.4s ease;
+    cursor: crosshair; 
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: filter 0.3s;
+}
+
+.photo.large { grid-column: span 2; grid-row: span 3; }
+.photo.vertical { grid-row: span 2; }
+.photo.horizontal { grid-column: span 2; }
+
+.photo:hover {
+    transform: translateY(-5px); 
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(183, 136, 226, 0.4);
+}
+
+.photo:hover img {
+    filter: brightness(1.1);
+}
+
+/* =========================================
+   5. FUNCIONALIDADES ESPECIALES
+   ========================================= */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: black; 
+}
+/* Pantalla de carga a pantalla completa */
+#preview-splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Fondo con el mismo gradiente animado del login */
+    background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #2c3e50, #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* El contenedor del mensaje con efecto cristal */
+.splash-content {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    max-width: 350px;
+    width: 90%;
+}
+
+/* Animación del fondo (idéntica a login.css) */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Loader más elegante */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #e67e22; /* Color naranja principal */
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden { display: none !important; }

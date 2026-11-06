@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON KBRN - Eladio Carrión | Info</title>
+    <link rel="stylesheet" href="../css/don_kbrn.css">
+</head>
+<body>
+
+
+    <header class="street-header">
+        <div class="spray-paint-overlay"></div>
+        <h1>DON KBRN</h1>
+        <p class="subtitle">ESTILO BOOM BAP // PRODUCTO DE DJ PREMIER // 2025</p>
+    </header>
+
+    <main class="main-container">
+        <section class="album-sidebar">
+            <div class="image-frame">
+                <img src="../img/DON KBRN.jpg" alt="Portada de DON KBRN">
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="label">BPM RANGE</span>
+                    <span class="value">88 - 95 BPM</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">SONIDO</span>
+                    <span class="value">ANÁLOGO</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">MUESTRAS (SAMPLES)</span>
+                    <span class="value">VINILO</span>
+                </div>
+                <div class="spec-card">
+                    <span class="label">ESTUDIO</span>
+                    <span class="value">NY BRONX</span>
+                </div>
+            </div>
+
+            <div class="history-container">
+                <h2>LA LEYENDA DEL DISCO</h2>
+                <p>
+                    DON KBRN es el puente definitivo entre el trap moderno de Eladio y la era dorada del hip-hop neoyorquino. Producido íntegramente por la leyenda DJ Premier, el álbum captura la esencia cruda del asfalto, con barras afiladas sobre ritmos Boom Bap clásicos. No es trap, es RAP puro.
+                </p>
+            </div>
+        </section>
+
+        <section class="info-details">
+            <div class="tracklist-container">
+                <h2>TRACKLIST (THE TRACKLIST)</h2>
+                <ul class="tracklist">
+                    <li><span class="track-num">01</span> Invencible <span class="time">1:30</span></li>
+                    <li><span class="track-num">02</span> Ohtani <span class="time">3:18</span></li>
+                    <li><span class="track-num">03</span> Vetements ft. Myke Towers <span class="time">3:41</span></li>
+                    <li><span class="track-num">04</span> H.I.M. <span class="time">1:49</span></li>
+                    <li><span class="track-num">05</span> Broly ft. Neutro Shorty <span class="time">2:51</span></li>
+                    <li><span class="track-num">06</span> Call My Line ft. Jessie Reyez <span class="time">3:32</span></li>
+                    <li><span class="track-num">07</span> 100 Conmigo <span class="time">2:31</span></li>
+                    <li><span class="track-num">08</span> Tiffany ft. Peso Pluma <span class="time">4:24</span></li>
+                    <li><span class="track-num">09</span> El Reggaetón Del Disco ft. Cris MJ <span class="time">3:23</span></li>
+                    <li><span class="track-num">10</span> Me Muero ft. Lia Kali <span class="time">3:15</span></li>
+                    <li><span class="track-num">11</span> Cuenta a 10 <span class="time">3:20</span></li>
+                    <li><span class="track-num">12</span> Branzino ft. Big Sean <span class="time">4:22</span></li>
+                    <li><span class="track-num">13</span> E.L.A.D.I.O. <span class="time">2:51</span></li>
+                    <li><span class="track-num">14</span> Mosh Pit Muzik <span class="time">2:40</span></li>
+                    <li><span class="track-num">15</span> Cómodo <span class="time">2:33</span></li>
+                    <li><span class="track-num">16</span> AMG ft. Young Miko <span class="time">2:52</span></li>
+                    <li><span class="track-num">17</span> Özil <span class="time">2:39</span></li>
+                    <li><span class="track-num">18</span> Romeo y Julieta ft. Quevedo <span class="time">3:27</span></li>
+                    <li><span class="track-num">19</span> Piedras en la Ventana <span class="time">2:56</span></li>
+                    <li><span class="track-num">20</span> Y U So Cold? <span class="time">2:31</span></li>   
+                    <li><span class="track-num">21</span> Carta a Dios 2 <span class="time">2:34</span></li>                 
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="../html/Albumes.html" class="back-btn">VOLVER A LA COLECCIÓN</a>
+    </footer>
+
+    <script>
+        const follower = document.getElementById('cursor-follower');
+        
+        // Variables para la posición del ratón y de la imagen
+        let mouseX = 0;
+        let mouseY = 0;
+        let followerX = 0;
+        let followerY = 0;
+
+        // Velocidad de seguimiento (menor número = más suave/lento)
+        const speed = 0.06; 
+
+        // Escuchamos el movimiento del ratón
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Función de animación constante
+        function animate() {
+            // Interpolación lineal (Lerp) para suavizar el movimiento
+            followerX += (mouseX - followerX) * speed;
+            followerY += (mouseY - followerY) * speed;
+
+            // Aplicamos la posición a la imagen
+            // He quitado el transform: translate(-50%, -50%) del CSS para manejar el centrado aquí
+            // Esto evita conflictos con otras animaciones y da más control.
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+
+            requestAnimationFrame(animate);
+        }
+
+        // Arrancamos la animación
+        animate();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* 1. Mantenemos tus variables al principio */
+:root {
+    --color-primario: rgb(183, 136, 226); 
+    --color-fondo-pagina: rgb(190, 244, 244); 
+    --color-titulos: rgb(158, 81, 230); 
+    --color-acentos: rgb(194, 157, 228);
+    --color-acentos-transparente: rgba(182, 91, 198, 0.474);
+}
+
+/* =========================================
+   1. CONFIGURACIÓN BASE (BODY)
+   ========================================= */
+body {
+    background-color: var(--color-fondo-pagina); 
+    display: grid; 
+    grid-template-rows: auto;
+    grid-row-gap: 1em; 
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+/* =========================================
+   2. ENCABEZADO (HEADER) Y TÍTULOS
+   ========================================= */
+header {
+    background-color: rgb(0, 0, 0); 
+    border: 0.5cm solid var(--color-primario); 
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+h1 {
+    color: var(--color-titulos); 
+    text-shadow: 5px 5px 5px; 
+    text-align: center; 
+    font-size: xx-larger; 
+}
+
+/* =========================================
+   3. NAVEGACIÓN (NAV) Y MENÚS
+   ========================================= */
+nav {
+    display: grid; 
+    grid-template-rows: auto; 
+    background-color: black; 
+    border: 0.5cm solid var(--color-primario); 
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+ul {
+    display: inline-flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    gap: 20px; 
+    list-style: none;
+    margin: 0; 
+    padding-left: 20px; 
+}
+
+#albumes > span {
+    background-color: var(--color-acentos); 
+    color: beige; 
+    border-radius: 0.5cm; 
+}
+
+h2 > span { 
+    background-color: var(--color-acentos); 
+    border-radius: 0.5cm; 
+    margin-left: 20px; 
+}
+
+h3 > span {
+    background-color: var(--color-acentos-transparente); 
+    color: beige; 
+    border-radius: 1cm; 
+    font-size: larger; 
+}
+
+h3:hover { 
+    scale: 1.1; 
+}
+
+/* --- Estilos para el Navegador Compacto --- */
+nav.compacto h2#nav {
+    display: none; 
+}
+
+nav.compacto {
+    padding: 5px 0; 
+    border-width: 0.2cm; 
+    transition: all 0.4s ease; 
+}
+
+nav.compacto h3 > span {
+    font-size: 0.9rem; 
+    padding: 5px 15px;
+}
+
+nav.compacto ul {
+    justify-content: flex-start;
+    margin: 5px auto;
+    gap: 10px;
+}
+
+/* =========================================
+   4. SECCIÓN PRINCIPAL (ARTICLE & FIGURES)
+   ========================================= */
+article {
+    background-color: rgb(0, 0, 0); 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 15px; 
+    padding: 20px;
+    text-align: center; 
+    border: 0.5cm solid var(--color-primario); 
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+img {
+    border-radius: 1cm; 
+    box-shadow: 5px 5px 5px; 
+}
+
+/* =========================================
+   5. TARJETAS CON EFECTO 3D (FLIP CARDS)
+   ========================================= */
+.album-card {
+    perspective: 1000px; 
+    width: 100%;
+    height: 400px; 
+    margin: 0;
+    background-color: transparent !important; 
+    border: none !important;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.album-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 1cm;
+    border: 0.5cm solid var(--color-primario); 
+    box-sizing: border-box; 
+}
+
+.card-front {
+    background-color: var(--color-acentos-transparente);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.card-front img {
+    width: 250px; 
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px; 
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+.card-front figcaption h4 span {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background-color: var(--color-acentos-transparente);
+    color: white;
+    border-radius: 0.5cm;
+}
+
+.card-back {
+    background-color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.card-back-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-back-content h3 {
+    color: var(--color-titulos);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.card-back-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* --- BOTONES --- */
+.spotify-btn {
+    background-color: #1DB954;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.spotify-btn:hover {
+    background-color: #1ed760;
+    scale: 1.05;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-btn {
+    background-color: var(--color-titulos); 
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.info-btn:hover {
+    background-color: var(--color-primario);
+    scale: 1.05;
+}
+
+/* =========================================
+   6. FUNCIONALIDADES ESPECIALES (JS STICKY)
+   ========================================= */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: black;
+}
